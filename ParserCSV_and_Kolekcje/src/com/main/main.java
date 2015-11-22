@@ -2,9 +2,8 @@ package com.main;
 
 import Parser.GenerateCSV;
 import Parser.ParseCSV;
-import Parser.duplicateCSV;
 import properties.CrunchifyGetPropertyValues;
-
+import kolekcje.kolekcje;
 import java.io.IOException;
 
 
@@ -18,10 +17,12 @@ public class main{
 
         GenerateCSV.generateCsvFile(properties.getPropValues("filename"),5243);
         ParseCSV.ParseCsv(properties.getPropValues("filename"));
-        //parsuje plik, vfliduje, usuwa dublikaty, i zapisuje (ZapisWCSV)
+        //parsuje plik, validuje, usuwa dublikaty, i zapisuje (ZapisWCSV)
         //---------------------------KONIEC---------------------------------------
-        //---------------------------KOLEKCJE-------------------------------------
 
+        //---------------------------KOLEKCJE-------------------------------------
+        kolekcje.start();
+        //---------------------------KONIEC---------------------------------------
     }
 }
 
